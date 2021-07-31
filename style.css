@@ -1,0 +1,103 @@
+@import "reset.css";
+body{
+    background-color: #f6f9fc;
+    display: flex;
+
+    padding-top: 50px;
+}
+
+.paintBlock{
+    width: 70vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+}
+
+.paintBlock .canvas {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.paintBlock .controls{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.paintBlock .controls .controls_range{
+    margin-bottom: 20px;
+}
+
+.paintBlock .controls .controls_btns{
+    margin-bottom: 30px;
+}
+
+.paintBlock .controls_btns button{
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+
+}
+
+.paintBlock .controls .controls_colors{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.paintBlock .controls_colors .controls_color {
+    width:50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.saveBlock{
+    width: 30vw;
+    height: 100vh;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.saveBlock .savedImage{
+    margin: 10px;
+    width: 70%;
+    height: 30%;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.saveBlock .loadedImage{
+    margin: 10px;
+    width: 70%;
+    height: 30%;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* 왜 saveBlock에 position: absolute를 적용하지 않고
+paintBlock에만 position: fixed를 적용하면 
+두 블록이 겹쳐서 보이게 되는걸까? */
